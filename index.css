@@ -1,82 +1,96 @@
 * {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-	--primary: #0018ED;
-	--mainFont: #2D2E3A;
-	--greyFont: #696C74;
+	--primary: #0018ed;
+	--mainFont: #2d2e3a;
+	--greyFont: #696c74;
 }
 
 body {
-	font-family: 'Source Sans Pro', sans-serif;
 	color: var(--mainFont);
+
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .card {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	padding: 32px;
-	border: 1px solid #D1D6E9;
-	border-radius: 12px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
 	max-width: 1440px;
 	margin: 0 auto;
-	flex-wrap: wrap;
+	padding: 32px;
+
+	border: 1px solid #d1d6e9;
+	border-radius: 12px;
+
 	gap: 20px;
 }
 
 .card__name {
 	display: flex;
 	align-items: center;
+
 	gap: 0 24px;
 }
 
 .card__title {
 	color: var(--mainFont);
-	font-weight: 600;
+
 	font-size: 24px;
+	font-weight: 600;
 	line-height: 120%;
 }
 
 .card__school {
 	color: var(--greyFont);
-	font-weight: 400;
+
 	font-size: 20px;
+	font-weight: 400;
 	line-height: 120%;
 }
 
 .card__stats {
 	display: flex;
+
 	gap: 0 24px;
 }
 
 .card__stat {
 	display: flex;
 	flex-direction: column;
+
 	gap: 8px;
 }
 
-.card__stat > div:first-child {
+.card__stat>div:first-child {
 	color: var(--greyFont);
-	font-weight: 400;
+
 	font-size: 20px;
+	font-weight: 400;
 	line-height: 120%;
 }
 
 .card__stat>div:last-child {
-	font-weight: 600;
 	font-size: 20px;
+	font-weight: 600;
 	line-height: 120%;
 }
 
 @media screen and (max-width: 600px) {
 	.card__stats {
-		flex-wrap: wrap;
-		row-gap: 20px;
 		flex: 1;
+		flex-wrap: wrap;
+
+		row-gap: 20px;
 	}
 
 	.card__stat {
@@ -88,4 +102,86 @@ body {
 	.card__stat {
 		flex: 0 1 100%;
 	}
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 22px 26px 21px;
+
+	background: #ffffff;
+
+	font-family: "Source Sans Pro";
+	font-style: normal;
+}
+
+.header__left-menu {
+	display: flex;
+
+	gap: 0 48px;
+}
+
+.header__button {
+	display: flex;
+	align-items: center;
+
+	padding: 16px 32px;
+
+	cursor: pointer;
+
+	color: #0018ed;
+	border: none;
+	border-radius: 32px;
+	outline: 2px solid #0018ed;
+	background: inherit;
+
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 25px;
+
+	gap: 8px;
+}
+
+
+
+.header__menu {
+	display: flex;
+
+	font-family: "Source Sans Pro";
+	font-size: 20px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 120%;
+
+	gap: 32px;
+}
+
+.header__menu-links {
+	display: flex;
+
+	list-style-type: none;
+
+	gap: 24px;
+}
+
+.header__menu-link {
+	text-decoration: none;
+
+	color: #2d2e3a;
+}
+
+.header__menu-search {
+	display: flex;
+
+	gap: 8px;
+}
+
+.header__menu-user {
+	display: flex;
+
+	gap: 8px;
 }
